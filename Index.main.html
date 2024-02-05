@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продуктовий магазин Скала</title>
+    <style>
+        /* Загальні стилі (залишаємо без змін) */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            float: left;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        .login-button {
+            background-color: Red;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-button:hover {
+            background-color: #ffcc00;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color:  #333;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4caf50;
+        }
+
+        .product-card {
+            width: calc(25% - 20px);
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .product-card:nth-child(1)::before,
+        .product-card:nth-child(5)::before,
+        .product-card:nth-child(6)::before {
+            content: "New";
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ffcc00;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-card h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .order-button {
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .order-button:hover {
+            background-color: green;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .menu-toggle {
+            cursor: pointer;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+
+        .mobile-nav {
+            display: none;
+            background: #333;
+            padding: 20px;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mobile-nav li {
+            margin-bottom: 10px;
+        }
+
+        .mobile-nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .mobile-nav a:hover {
+            color: green;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .ad-container {
+            background-color: aliceblue;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .founder-info {
+            margin-top: 20px;
+        }
+        body {
+        background-image: url('%D0%A4%D0%BE%D0%BD.jpg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+        .founder-info{
+            color:aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="https://img.freepik.com/premium-vector/online-shop-logo-designs-concept-vector-online-store-logo-designs_7649-661.jpg" width="80" height="80">
+        <h1>Продуктовий магазин Скала</h1>
+        <a href="Index_project.html" class="login-button">Увійти</a>
+        <nav>
+            <ul>
+                <li><a href="Index.main.html">Головна</a></li>
+                <li><a href="Index.product.html">Продукти</a></li>
+                <li><a href="Index.Contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <div class="menu-toggle" onclick="toggleMobileMenu()">Меню</div>
+            <ul class="mobile-nav">
+                <li><a href="Index.main.html">Головна</a></li>
+                <li><a href="Index.product.html">Продукти</a></li>
+                <li><a href="Index.Contact.html">Контакти</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+    <div class="ad-container" style="color:red;">
+    <h2 style="color:#333;">Знижка тижня!</h2>
+    <p>Спеціальна пропозиція для наших клієнтів - замовте продукти за вигідною ціною до кінця тижня та отримайте додаткову знижку 10% скидку на яблуки та кавуни на празнечний празник.</p>
+    <button class="order-button">Замовити зараз</button>
+    </div>
+
+        <div class="founder-info">
+            <h2 style="color:#333;" >Про нас</h2>
+            <p>Ми - продуктовий магазин "Скала". Наш магазин пропонує вам великий вибір свіжих та якісних продуктів за доступними цінами. Завітайте до нас та переконайтеся у високій якості наших товарів!</p>
+
+            <h2 style="color:#333;">Засновник</h2>
+            <p>Магазин "Скала" заснований в 2015 році самим [Олександр Григорович]. Його головной метою було поставить для всіх зручний інтернет магазин в якому було удобно заказувать продукти і таким же чином доставлять їх покупателям без опозданий або інших приключеній.</p>
+        </div>
+
+
+        <div class="product-card">
+          <img src="%D0%A4%D0%BE%D1%82%D0%BE.jpg.jpg">
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            var mobileNav = document.querySelector('.mobile-nav');
+            mobileNav.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

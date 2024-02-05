@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Контакти</title>
+    <style>
+        /* Загальні стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('%D0%A4%D0%BE%D0%BD.jpg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Стилізація хедера сайту */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            float: left;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color:floralwhite;
+        }
+
+        .login-button {
+            background-color: Red;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-button:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Стилізація таблиці контактів */
+        .contact-info {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+        }
+
+        .contact-info h1 {
+            margin-bottom: 20px;
+            color:aliceblue;
+        }
+
+        .contact-info address p {
+            color: black; 
+        }
+
+        /* Стилізація форми */
+        .form-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        /* Зміни в стилі заголовка форми */
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; /* Змінив колір заголовка на темно-сірий */
+        }
+
+        button {
+            background-color: Red;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo"
+            src="https://img.freepik.com/premium-vector/online-shop-logo-designs-concept-vector-online-store-logo-designs_7649-661.jpg"
+            width="80" height="80">
+        <h1>Продуктовий магазин Скала</h1>
+        <div class="mobile-menu"></div>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h1>Контакти</h1>
+            <address>
+                <p><strong>Адреса:</strong> ваша адреса</p>
+                <p><strong>Email:</strong> ваша електронна пошта</p>
+                <p><strong>Телефон:</strong> ваш номер телефону</p>
+            </address>
+        </section>
+
+    <section class="contact-form">
+    <h2 style="color: #fff;">Змінити контактну інформацію</h2>
+    <form action="Index.main" method="post" class="form-container">
+        <div class="form-group">
+            <label for="address" style="color: black;">Адреса:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+            <label for="email" style="color: black;">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone" style="color: black;">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <button type="submit" style="color: #fff;">Зберегти зміни</button>
+    </form>
+</section>
+    </main>
+</body>
+
+</html>
